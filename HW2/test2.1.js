@@ -3,7 +3,7 @@ var b = prompt('Количество вариантов ответа', 0);
 
 //Универсальная ф-ия для генерации элементов
 function genElem(newElem, parElem, text, attrs, style,) {
-  var newElem;
+  var newElem; // лишня строчка
   var elem = document.createElement(newElem);
 //добавление атрибутов
   if (attrs) {
@@ -47,6 +47,7 @@ function getQuestion(a, b) {
     genElem('input', innDiv, '', {'type': 'checkbox'}, {'margin': '30px 15px 17px 25px'});
     //Variants text
     genElem('label', innDiv, 'Вариант ответа №'+j, {}, {'fontSize': '17px'});
+    // для label можна було ще добавить атрибут for
   }
   }
 };
@@ -58,4 +59,7 @@ genElem('div', document.body, '', {'id': 'button'}, {'text-align':'center', 'fon
 var resButt = document.getElementById('button');
 genElem('input', resButt, 'dca', {'type': 'submit', 'value': 'Проверить мои результаты'});
 
-
+// Ну так уже лучше! :)
+// функцию подмутил десь? ) главно шоб поняв як воно фунциклируе!
+// наповниш если шо про стилизацию кода, бо читать полотном не сильно удобно.
+// І не заводь на кажду домашку отдельний репозиторий ) Просто добавляй папку в текущий и роби новий комит.
